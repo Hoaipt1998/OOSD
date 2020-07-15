@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyThuVien1", "QuanLyThuVien1\QuanLyThuVien1.csproj", "{810BC967-8699-4DC9-8038-D317403612D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{810BC967-8699-4DC9-8038-D317403612D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810BC967-8699-4DC9-8038-D317403612D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810BC967-8699-4DC9-8038-D317403612D1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{810BC967-8699-4DC9-8038-D317403612D1}.Debug|x86.Build.0 = Debug|Any CPU
+		{810BC967-8699-4DC9-8038-D317403612D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810BC967-8699-4DC9-8038-D317403612D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{810BC967-8699-4DC9-8038-D317403612D1}.Release|x86.ActiveCfg = Release|x86
+		{810BC967-8699-4DC9-8038-D317403612D1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B05A5CE7-7645-42E8-93C0-A7669460A5E4}
+	EndGlobalSection
+EndGlobal
