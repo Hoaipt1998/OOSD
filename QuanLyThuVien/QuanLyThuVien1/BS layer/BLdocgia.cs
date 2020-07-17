@@ -48,5 +48,10 @@ namespace QuanLyThuVien1.BS_layer
             string timkiem = @"exec dbo.timkiemdocgia N'" + tendg + "'";
             return db.ExecuteQueryDataTable(timkiem, CommandType.Text);
         }
+        public DataSet laydocgiaId(string madocgia)
+        {
+            string laydocgiaId = @"exec dbo.kiemtradocgia";
+            return db.ExecuteQueryDataSet(laydocgiaId, CommandType.Text);
+        }
     }
 }

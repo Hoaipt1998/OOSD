@@ -37,9 +37,10 @@ namespace QuanLyThuVien1
             if (h != 0)
             {
                 GiaoDienChinh gdc = new GiaoDienChinh();
-
+                this.Hide();
                 gdc.ShowDialog();
-                this.Close();
+                this.Show();
+                
             }
             else MessageBox.Show("Đăng nhập thất thất BẠI");
         }

@@ -62,7 +62,7 @@ namespace QuanLyThuVien1.BS_layer
                 DataTable dt = db.ExecuteQueryDataTable(kttk, CommandType.Text);
                 if (dt.Rows.Count >0)
                 {
-                    MessageBox.Show("Bạn đã đăng nhập thành công");
+                   
                     string h = dt.Rows[0]["loai"].ToString();
                     m = dt.Rows[0]["manhanvien"].ToString();
                     if (h == "1")
@@ -93,6 +93,11 @@ namespace QuanLyThuVien1.BS_layer
         {
             string doimatkhau = @"exec dbo.doimatkhau N'" + m + "',N'" + mk + "'";
             return db.MyExecuteNonQuery(doimatkhau, CommandType.Text,ref err);
+        }
+        public DataSet laynhanvienId(string manhanvien)
+        {
+            string laynhanvienId = @"exec dbo.kiemtranv";
+            return db.ExecuteQueryDataSet(laynhanvienId, CommandType.Text);
         }
     }
 }

@@ -39,20 +39,19 @@ namespace QuanLyThuVien1
 
         private void buttonTimKiemTen_Click(object sender, EventArgs e)
         {
-            dt = new DataTable();
-            dt.Clear();
-            dt = sach.timkiem2(tbTK.Text);
-            dgvTK.DataSource = dt;
+            
+           
+            BLsach.Instance.SetSearchAlgorithm(new SearchTenSach());
+            DataTable tb = BLsach.Instance.timsach(tbTK.Text);
+            dgvTK.DataSource = tb;
             dgvTK.AutoResizeColumns();
         }
 
         private void buttonTimKiemMa_Click(object sender, EventArgs e)
         {
-            dt = new DataTable();
-            dt.Clear();
-            dt = sach.timkiem1(tbTK.Text);
-            dgvTK.DataSource = dt;
-            dgvTK.AutoResizeColumns();
+            BLsach.Instance.SetSearchAlgorithm(new SearchLoaiSach());
+            DataTable tb = BLsach.Instance.timsach(tbTK.Text);
+            dgvTK.DataSource = tb;
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)

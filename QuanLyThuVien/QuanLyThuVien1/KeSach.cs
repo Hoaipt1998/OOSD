@@ -35,8 +35,12 @@ namespace QuanLyThuVien1
             tbTenKe.Enabled = false;
             ds = new DataSet();
             ds = k.Layke();
+           
+
             dgvKS.DataSource = ds.Tables[0];
-            dgvKS.AutoResizeColumns();
+          
+            dgvKS.Columns[1].Width = 150;
+            //dgvKS.AutoResizeColumns();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -84,20 +88,27 @@ namespace QuanLyThuVien1
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-            if (them)
+            if (tbID.Text == "" || tbTenKe.Text == "")
             {
-                k.themke(tbID.Text, tbTenKe.Text, ref err);
-                them = false;
-                load();
+                MessageBox.Show("Error", "Thieu Thong TIn", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (sua)
+            else
             {
-                k.suake(tbID.Text, tbTenKe.Text, ref err);
-                sua = false;
-                load();
+                if (them)
+                {
+                    k.themke(tbID.Text, tbTenKe.Text, ref err);
+                    them = false;
+                    load();
+                }
+                else if (sua)
+                {
+                    k.suake(tbID.Text, tbTenKe.Text, ref err);
+                    sua = false;
+                    load();
+                }
+                tbID.Enabled = false;
+                tbTenKe.Enabled = false;
             }
-            tbID.Enabled = false;
-            tbTenKe.Enabled = false;
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)

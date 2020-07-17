@@ -82,40 +82,40 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(38, 91);
+            this.label1.Location = new System.Drawing.Point(18, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 17);
+            this.label1.Size = new System.Drawing.Size(92, 20);
             this.label1.TabIndex = 74;
             this.label1.Text = "Tài khoản:";
             // 
             // tbTK
             // 
-            this.tbTK.Location = new System.Drawing.Point(116, 91);
+            this.tbTK.Location = new System.Drawing.Point(116, 83);
             this.tbTK.Multiline = true;
             this.tbTK.Name = "tbTK";
-            this.tbTK.Size = new System.Drawing.Size(182, 28);
+            this.tbTK.Size = new System.Drawing.Size(182, 36);
             this.tbTK.TabIndex = 73;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(38, 166);
+            this.label2.Location = new System.Drawing.Point(18, 134);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
+            this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 79;
             this.label2.Text = "Mật khẩu:";
             // 
             // tbMK
             // 
-            this.tbMK.Location = new System.Drawing.Point(116, 165);
+            this.tbMK.Location = new System.Drawing.Point(116, 125);
             this.tbMK.Multiline = true;
             this.tbMK.Name = "tbMK";
-            this.tbMK.Size = new System.Drawing.Size(182, 28);
+            this.tbMK.Size = new System.Drawing.Size(182, 39);
             this.tbMK.TabIndex = 78;
             // 
             // TaiKhoan

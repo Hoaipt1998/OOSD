@@ -61,6 +61,8 @@ namespace QuanLyThuVien1
             ds = dg.Laydocgia();
             dgvDG.DataSource = ds.Tables[0];
             dgvDG.AutoResizeColumns();
+            dgvDG.Columns[1].Width = 200;
+            dgvDG.Columns[3].Width = 200;
         }
 
         private void dgvDG_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -123,22 +125,29 @@ namespace QuanLyThuVien1
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (them)
+            if (tbID.Text == "" || tbTDG.Text == "" || tbGT.Text == "" || tbDC.Text == "")
             {
-                dg.themdocgia(tbID.Text, tbTDG.Text,tbGT.Text,tbDC.Text, ref err);
-                them = false;
-                load();
+                MessageBox.Show("Error", "Thieu Thong TIn", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (sua)
+            else
             {
-                dg.suadocgia(tbID.Text, tbTDG.Text, tbGT.Text, tbDC.Text, ref err);
-                sua = false;
-                load();
+                if (them)
+                {
+                    dg.themdocgia(tbID.Text, tbTDG.Text, tbGT.Text, tbDC.Text, ref err);
+                    them = false;
+                    load();
+                }
+                else if (sua)
+                {
+                    dg.suadocgia(tbID.Text, tbTDG.Text, tbGT.Text, tbDC.Text, ref err);
+                    sua = false;
+                    load();
+                }
+                tbID.Enabled = false;
+                tbTDG.Enabled = false;
+                tbGT.Enabled = false;
+                tbDC.Enabled = false;
             }
-            tbID.Enabled = false;
-            tbTDG.Enabled = false;
-            tbGT.Enabled = false;
-            tbDC.Enabled = false;
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)

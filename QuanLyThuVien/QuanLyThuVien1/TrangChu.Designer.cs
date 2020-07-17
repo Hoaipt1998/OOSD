@@ -55,7 +55,7 @@
             // 
             this.btnThoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThoat.BackgroundImage")));
             this.btnThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.Navy;
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThoat.Location = new System.Drawing.Point(613, 15);
@@ -71,14 +71,14 @@
             // 
             this.btnDangnhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDangnhap.BackgroundImage")));
             this.btnDangnhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangnhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangnhap.ForeColor = System.Drawing.Color.Navy;
             this.btnDangnhap.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnDangnhap.Location = new System.Drawing.Point(538, 15);
+            this.btnDangnhap.Location = new System.Drawing.Point(469, 15);
             this.btnDangnhap.Name = "btnDangnhap";
-            this.btnDangnhap.Size = new System.Drawing.Size(69, 32);
+            this.btnDangnhap.Size = new System.Drawing.Size(138, 32);
             this.btnDangnhap.TabIndex = 6;
-            this.btnDangnhap.Text = "Login";
+            this.btnDangnhap.Text = "Đăng Nhập";
             this.btnDangnhap.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnDangnhap.UseVisualStyleBackColor = true;
             this.btnDangnhap.Click += new System.EventHandler(this.btnDangnhap_Click);
@@ -86,7 +86,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.BackColor = System.Drawing.Color.Lavender;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label1.Location = new System.Drawing.Point(42, 76);

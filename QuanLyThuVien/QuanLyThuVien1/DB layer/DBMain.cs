@@ -19,6 +19,27 @@ namespace QuanLyThuVien1.DB_layer
             conn = new SqlConnection(ConnStr);
             comm = conn.CreateCommand();
         }
+        public SqlConnection GetConnection
+        {
+            get
+            {
+                return conn;
+            }
+        }
+        public void openconection()
+        {
+            if ((conn.State == System.Data.ConnectionState.Closed))
+            {
+                conn.Open();
+            }
+        }
+        public void closeconnection()
+        {
+            if ((conn.State == System.Data.ConnectionState.Open))
+            {
+                conn.Close();
+            }
+        }
         public DataSet ExecuteQueryDataSet(string strSQL, CommandType ct)
         {
             if (conn.State == ConnectionState.Open) 
@@ -67,6 +88,20 @@ namespace QuanLyThuVien1.DB_layer
                 conn.Close();
             } 
             return f; 
+        }
+        public DataTable ExecuteQuery(string sql)
+        {
+            if (conn.State == ConnectionState.Open)
+                conn.Close();
+            DataTable table = new DataTable();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(table);
+            conn.Close();
+            return table;
         }
     }
 }

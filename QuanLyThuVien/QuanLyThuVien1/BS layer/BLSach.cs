@@ -11,10 +11,37 @@ namespace QuanLyThuVien1.BS_layer
     class BLsach
     {
         DBMain db = null;
+        private static BLsach instance;
+        private ISearchAlgorithm _Search;
+
+        public static BLsach Instance
+        {
+            get
+            {
+                if (instance == null) instance = new BLsach();
+                return instance;
+            }
+
+            set
+            {
+                instance = value;
+            }
+        }
+
         public BLsach()
         {
             db = new DBMain();
         }
+        public BLsach(ISearchAlgorithm searchAlgorithm)
+        {
+            this._Search = searchAlgorithm;
+        }
+        public void SetSearchAlgorithm(ISearchAlgorithm searchAlgorithm)
+        {
+            this._Search = searchAlgorithm;
+
+        }
+
         public DataSet Laysach()
         {
             string laysach = @"exec dbo.thongtinsach";
@@ -53,6 +80,14 @@ namespace QuanLyThuVien1.BS_layer
             string timkiem = @"exec dbo.timkiemsach1 N'" + masach + "'";
             return db.ExecuteQueryDataTable(timkiem, CommandType.Text);
         }
-       
+        public DataTable timsach(string tensach)
+        {
+            return _Search.search(tensach);
+        }
+        public DataSet laysachId(string masach)
+        {
+            string laysachID = @"exec dbo.kiemtrasach";
+            return db.ExecuteQueryDataSet(laysachID, CommandType.Text);
+        }
     }
 }

@@ -74,6 +74,9 @@
     <Compile Include="BS layer\BLnhanvien.cs" />
     <Compile Include="BS layer\BLphieumuon.cs" />
     <Compile Include="BS layer\BLsach.cs" />
+    <Compile Include="BS layer\ISearchAlgorithm.cs" />
+    <Compile Include="BS layer\SearchLoaiSach.cs" />
+    <Compile Include="BS layer\SearchTenSach.cs" />
     <Compile Include="Builder\AdminBuilder.cs" />
     <Compile Include="Builder\controllerNhanVien.cs" />
     <Compile Include="Builder\DocGiaBuilder.cs" />

@@ -83,20 +83,27 @@ namespace QuanLyThuVien1
 
         private void buttonLuu_Click(object sender, EventArgs e)
         {
-            if (them)
+            if (tbID.Text == "" || tbTLS.Text == "")
             {
-                ls.themloaisach(tbID.Text, tbTLS.Text, ref err);
-                them = false;
-                load();
+                MessageBox.Show("Error", "Thieu Thong TIn", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (sua)
+            else
             {
-                ls.sualoaisach(tbID.Text, tbTLS.Text, ref err);
-                sua = false;
-                load();
+                if (them)
+                {
+                    ls.themloaisach(tbID.Text, tbTLS.Text, ref err);
+                    them = false;
+                    load();
+                }
+                else if (sua)
+                {
+                    ls.sualoaisach(tbID.Text, tbTLS.Text, ref err);
+                    sua = false;
+                    load();
+                }
+                tbID.Enabled = false;
+                tbTLS.Enabled = false;
             }
-            tbID.Enabled = false;
-            tbTLS.Enabled = false;
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)

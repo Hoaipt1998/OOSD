@@ -33,18 +33,25 @@ namespace QuanLyThuVien1
 
         private void buttonXacNhan_Click(object sender, EventArgs e)
         {
-            if (tbMK.Text != tbRMK.Text)
+            if (tbMK.Text == "" || tbRMK.Text == "")
             {
-                MessageBox.Show("Mật khẩu xác thực không khớp, vui lòng nhập lại!!!");
+                MessageBox.Show("Error", "Thieu Thong TIn", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                bool loi = nv.doimatkhau(tbMK.Text, DangNhap.m, ref err);
-                if (loi)
+                if (tbMK.Text != tbRMK.Text)
                 {
-                    MessageBox.Show("Đổi mật khẩu thành công");
+                    MessageBox.Show("Mật khẩu xác thực không khớp, vui lòng nhập lại!!!");
                 }
-                else MessageBox.Show("Đổi mật khẩu thất bại, xin hãy thử lại");
+                else
+                {
+                    bool loi = nv.doimatkhau(tbMK.Text, DangNhap.m, ref err);
+                    if (loi)
+                    {
+                        MessageBox.Show("Đổi mật khẩu thành công");
+                    }
+                    else MessageBox.Show("Đổi mật khẩu thất bại, xin hãy thử lại");
+                }
             }
         }
     }

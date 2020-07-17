@@ -50,14 +50,16 @@ namespace QuanLyThuVien1
             dgvS.DataSource = ds.Tables[0];
             dgvS.AutoResizeColumns();
             comboBoxLoaiSach.DataSource = ls.Layloaisach().Tables[0];
-            comboBoxLoaiSach.DisplayMember = "maloaisach";
+            comboBoxLoaiSach.DisplayMember = "tenloaisach";
             comboBoxLoaiSach.ValueMember = "maloaisach";
             comboBoxLoaiSach.SelectedItem = null;
 
             comboBoxKeSach.DataSource = ke.Layke().Tables[0];
-            comboBoxKeSach.DisplayMember = "make";
+            comboBoxKeSach.DisplayMember = "tenke";
             comboBoxKeSach.ValueMember = "make";
             comboBoxKeSach.SelectedItem = null;
+            dgvS.Columns[1].Width = 250;
+            dgvS.Columns[4].Width = 100;
         }
 
         private void dgvS_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -98,7 +100,7 @@ namespace QuanLyThuVien1
             DialogResult a = MessageBox.Show("Bạn có muốn xóa sách này", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (a == DialogResult.Yes)
             {
-                bool h = s.xoasach(tbID.Text, ref err);
+                bool h = BLsach.Instance.xoasach(tbID.Text, ref err);
                 if (h == false)
                 {
                     MessageBox.Show("Bạn cần xóa những dữ liệu liên quan đến sách này !!!");
@@ -109,25 +111,55 @@ namespace QuanLyThuVien1
 
         private void Luu_Click(object sender, EventArgs e)
         {
-            if (them)
+            if (tbID.Text == "" || tbTS.Text == "" || tbSL.Text == "" || comboBoxKeSach.ValueMember == null||  comboBoxLoaiSach.ValueMember == null)
             {
-                s.themsach(tbID.Text, tbTS.Text, comboBoxLoaiSach.Text, Convert.ToInt32(tbSL.Text), comboBoxKeSach.Text, ref err);
-                them = false;
-                load();
+                MessageBox.Show("Error", "Thieu Thong TIn", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (sua)
+            else
             {
-                s.suasach(tbID.Text, tbTS.Text, comboBoxLoaiSach.Text, Convert.ToInt32(tbSL.Text), comboBoxKeSach.Text, ref err);
-                sua = false;
-                load();
+                if (them)
+                {
+                    if (BLsach.Instance.themsach(tbID.Text, tbTS.Text, comboBoxLoaiSach.SelectedValue.ToString(), Convert.ToInt32(tbSL.Text), comboBoxKeSach.SelectedValue.ToString(), ref err))
+                    {
+                        MessageBox.Show("Done!", "Them Thanh Cong", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        them = false;
+                        load();
+                    }
+                    else { MessageBox.Show("Error", "Sai Định Dạng Nhập Vào", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                }
+                else if (sua)
+                {
+                    BLsach.Instance.suasach(tbID.Text, tbTS.Text, comboBoxLoaiSach.SelectedValue.ToString(), Convert.ToInt32(tbSL.Text), comboBoxKeSach.SelectedValue.ToString(), ref err);
+                    sua = false;
+                    load();
+                }
             }
         }
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
-            dt = new DataTable();
-            dt = s.timkiem2(tbTK.Text);
-            dgvS.DataSource = dt;
+            //dt = new DataTable();
+            //dt = s.timkiem2(tbTK.Text);
+            //dgvS.DataSource = dt;
+            if (radioButtonTenSach.Checked)
+            {
+                BLsach.Instance.SetSearchAlgorithm(new SearchTenSach());
+                DataTable tb = BLsach.Instance.timsach(tbTK.Text);
+                dgvS.DataSource = tb;
+            }
+            else
+            {
+                if (radioButtonLoaiSach.Checked)
+                {
+                    BLsach.Instance.SetSearchAlgorithm(new SearchLoaiSach());
+                    DataTable tb = BLsach.Instance.timsach(tbTK.Text);
+                    dgvS.DataSource = tb;
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chọn kiểu tìm kiếm!");
+                }
+            }
         }
 
         private void buttonThoat_Click(object sender, EventArgs e)
@@ -166,6 +198,11 @@ namespace QuanLyThuVien1
             {
 
             }
+        }
+
+        private void tbTK_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
