@@ -119,19 +119,41 @@ namespace QuanLyThuVien1
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
-            
-            sua = true;
-            them = false;
-            tbTT.Enabled = true;
-            tbID.Enabled = false;
-            comboBoxNguoiMuon.Enabled = true;
-            comboBoxSach.Enabled = true;
-            comboBoxNguoiLap.Enabled = true;
-            dateTimePickerTra.Enabled = true;
-            string masach = comboBoxSach.Text;
-            DataTable table = new DataTable();
-            table = BLsach.Instance.laysachId(masach).Tables[0];
-            comboBoxSach.Text = table.Rows[0]["tensach"].ToString();
+            if (sua == true)
+            {
+                MessageBox.Show("Chọn rồi mà!!! Chọn hoài vậy !!!");
+            }
+            else
+            {
+                string masach = comboBoxSach.Text;
+                string manhanvien = comboBoxNguoiLap.Text;
+                string madocgia = comboBoxNguoiMuon.Text;
+                DataTable table = new DataTable();
+                DataTable table1 = new DataTable();
+                DataTable table2 = new DataTable();
+                table = BLsach.Instance.laysachId(masach).Tables[0];
+                table1 = nv.laynhanvienId(manhanvien).Tables[0];
+                table2 = dg.laydocgiaId(madocgia).Tables[0];
+                if (tbID.Text == "" || table.Rows.Count < 1 || table1.Rows.Count < 1 || table2.Rows.Count < 1)
+                {
+                    MessageBox.Show("Bạn cần chọn phiếu mượn muốn sửa để thực hiện thao tác này !!!");
+                }
+                else
+                {
+                    sua = true;
+                    them = false;
+                    tbTT.Enabled = true;
+                    tbID.Enabled = false;
+                    comboBoxNguoiMuon.Enabled = true;
+                    comboBoxSach.Enabled = true;
+                    comboBoxNguoiLap.Enabled = true;
+                    dateTimePickerTra.Enabled = true;
+                    comboBoxSach.Text = table.Rows[0]["tensach"].ToString();
+                    comboBoxNguoiLap.Text = table1.Rows[0]["tennhanvien"].ToString();
+                    comboBoxNguoiMuon.Text = table2.Rows[0]["tendocgia"].ToString();
+                }
+            }
+
 
 
 
@@ -239,6 +261,15 @@ namespace QuanLyThuVien1
         private void dgvPM_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void buttonTimKiemPM_Click(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt.Clear();
+            dt = pm.timkiempm(tbTK.Text);
+            dgvPM.DataSource = dt;
+            dgvPM.AutoResizeColumns();
         }
     }
 }

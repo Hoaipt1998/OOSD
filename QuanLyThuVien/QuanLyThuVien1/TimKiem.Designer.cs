@@ -80,11 +80,13 @@
             // 
             // dgvTK
             // 
+            this.dgvTK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTK.BackgroundColor = System.Drawing.Color.White;
             this.dgvTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTK.Location = new System.Drawing.Point(398, 141);
             this.dgvTK.Margin = new System.Windows.Forms.Padding(5);
             this.dgvTK.Name = "dgvTK";
+            this.dgvTK.ReadOnly = true;
             this.dgvTK.Size = new System.Drawing.Size(679, 502);
             this.dgvTK.TabIndex = 3;
             this.dgvTK.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTK_CellClick);
@@ -235,6 +237,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1143, 665);

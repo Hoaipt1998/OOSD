@@ -86,10 +86,12 @@
             // 
             // dgvLS
             // 
+            this.dgvLS.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvLS.BackgroundColor = System.Drawing.Color.White;
             this.dgvLS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLS.Location = new System.Drawing.Point(345, 81);
             this.dgvLS.Name = "dgvLS";
+            this.dgvLS.ReadOnly = true;
             this.dgvLS.Size = new System.Drawing.Size(334, 332);
             this.dgvLS.TabIndex = 17;
             this.dgvLS.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLS_CellClick);
@@ -114,7 +116,7 @@
             this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.Location = new System.Drawing.Point(142, 382);
-            this.buttonThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonThoat.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(153, 32);
             this.buttonThoat.TabIndex = 64;
@@ -128,7 +130,7 @@
             this.buttonXoa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoa.Location = new System.Drawing.Point(106, 336);
-            this.buttonXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonXoa.Margin = new System.Windows.Forms.Padding(2);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(91, 32);
             this.buttonXoa.TabIndex = 65;
@@ -142,7 +144,7 @@
             this.buttonSua.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSua.Location = new System.Drawing.Point(229, 280);
-            this.buttonSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSua.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(91, 32);
             this.buttonSua.TabIndex = 66;
@@ -156,7 +158,7 @@
             this.buttonThem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.Location = new System.Drawing.Point(106, 280);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonThem.Margin = new System.Windows.Forms.Padding(2);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(91, 32);
             this.buttonThem.TabIndex = 67;
@@ -170,7 +172,7 @@
             this.buttonLuu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonLuu.Location = new System.Drawing.Point(229, 336);
-            this.buttonLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonLuu.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLuu.Name = "buttonLuu";
             this.buttonLuu.Size = new System.Drawing.Size(91, 32);
             this.buttonLuu.TabIndex = 64;

@@ -153,6 +153,7 @@
             // 
             // dgvPM
             // 
+            this.dgvPM.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPM.BackgroundColor = System.Drawing.Color.White;
             this.dgvPM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPM.Location = new System.Drawing.Point(469, 108);
@@ -176,6 +177,7 @@
             this.buttonTimKiemPM.TabIndex = 48;
             this.buttonTimKiemPM.Text = "Tìm kiếm theo mã PM";
             this.buttonTimKiemPM.UseVisualStyleBackColor = true;
+            this.buttonTimKiemPM.Click += new System.EventHandler(this.buttonTimKiemPM_Click);
             // 
             // buttonThoat
             // 

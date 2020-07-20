@@ -41,17 +41,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(177, 247);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(66, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(126, 17);
+            this.label2.Size = new System.Drawing.Size(158, 20);
             this.label2.TabIndex = 86;
             this.label2.Text = "Nhập lại mật khẩu:";
             // 
             // tbRMK
             // 
-            this.tbRMK.Location = new System.Drawing.Point(352, 236);
+            this.tbRMK.Location = new System.Drawing.Point(240, 145);
             this.tbRMK.Multiline = true;
             this.tbRMK.Name = "tbRMK";
             this.tbRMK.Size = new System.Drawing.Size(182, 28);
@@ -63,7 +63,7 @@
             this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.Teal;
-            this.buttonThoat.Location = new System.Drawing.Point(211, 285);
+            this.buttonThoat.Location = new System.Drawing.Point(506, 145);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(90, 31);
             this.buttonThoat.TabIndex = 83;
@@ -77,7 +77,7 @@
             this.buttonXacNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonXacNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXacNhan.ForeColor = System.Drawing.Color.Teal;
-            this.buttonXacNhan.Location = new System.Drawing.Point(375, 285);
+            this.buttonXacNhan.Location = new System.Drawing.Point(506, 85);
             this.buttonXacNhan.Name = "buttonXacNhan";
             this.buttonXacNhan.Size = new System.Drawing.Size(90, 31);
             this.buttonXacNhan.TabIndex = 84;
@@ -89,28 +89,28 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(168, 47);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(272, 28);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 22);
+            this.label6.Size = new System.Drawing.Size(175, 25);
             this.label6.TabIndex = 82;
             this.label6.Text = "ĐỔI MẬT KHẨU";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.White;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(169, 146);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(66, 83);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 17);
+            this.label1.Size = new System.Drawing.Size(168, 20);
             this.label1.TabIndex = 81;
             this.label1.Text = "Nhập mật khẩu mới:";
             // 
             // tbMK
             // 
-            this.tbMK.Location = new System.Drawing.Point(352, 135);
+            this.tbMK.Location = new System.Drawing.Point(240, 85);
             this.tbMK.Multiline = true;
             this.tbMK.Name = "tbMK";
             this.tbMK.Size = new System.Drawing.Size(182, 28);

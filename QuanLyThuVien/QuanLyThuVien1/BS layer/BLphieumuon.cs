@@ -111,6 +111,13 @@ namespace QuanLyThuVien1.BS_layer
         {
             string xoa = @"exec dbo.xoaphieumuon N'" + mapm + "'";
             return db.MyExecuteNonQuery(xoa, CommandType.Text, ref err);
+
+
+        }
+        public DataTable timkiempm(string mapm)
+        {
+            string timkiempm = @"exec dbo.timkiemphieumuon N'" + mapm + "'";
+            return db.ExecuteQueryDataTable(timkiempm, CommandType.Text);
         }
     }
 }

@@ -15,7 +15,6 @@ namespace QuanLyThuVien1
     {
         string err = "";
         DataSet ds = null;
-        DataTable dt = null;
         BLsach s = new BLsach();
         BLloaisach ls = new BLloaisach();
         BLke ke = new BLke();
@@ -52,12 +51,12 @@ namespace QuanLyThuVien1
             comboBoxLoaiSach.DataSource = ls.Layloaisach().Tables[0];
             comboBoxLoaiSach.DisplayMember = "tenloaisach";
             comboBoxLoaiSach.ValueMember = "maloaisach";
-            comboBoxLoaiSach.SelectedItem = null;
+            comboBoxLoaiSach.SelectedItem = 1;
 
             comboBoxKeSach.DataSource = ke.Layke().Tables[0];
             comboBoxKeSach.DisplayMember = "tenke";
             comboBoxKeSach.ValueMember = "make";
-            comboBoxKeSach.SelectedItem = null;
+            comboBoxKeSach.SelectedItem = 1;
             dgvS.Columns[1].Width = 250;
             dgvS.Columns[4].Width = 100;
         }
@@ -76,6 +75,7 @@ namespace QuanLyThuVien1
 
         private void buttonThem_Click(object sender, EventArgs e)
         {
+            load();
             them = true;
             sua = false;
             tbID.Enabled = true;
@@ -87,12 +87,39 @@ namespace QuanLyThuVien1
 
         private void buttonSua_Click(object sender, EventArgs e)
         {
-            sua = true;
-            them = false;
-            tbTS.Enabled = true;
-            comboBoxLoaiSach.Enabled = true;
-            tbSL.Enabled = true;
-            comboBoxKeSach.Enabled = true;
+            if (sua == true)
+            {
+                MessageBox.Show("Chọn rồi mà!!! Chọn hoài vậy !!!");
+            }
+            else
+            {
+                string maloaisach = comboBoxLoaiSach.Text;
+                string make = comboBoxKeSach.Text;
+                DataTable table = new DataTable();
+                DataTable table1 = new DataTable();
+                table = ls.layloaisachId(maloaisach).Tables[0];
+                table1 = ke.laykesachID(make).Tables[0];
+                if (tbID.Text == "" || table.Rows.Count < 1 || table1.Rows.Count < 1)
+                {
+                    MessageBox.Show("Bạn cần chọn sách muốn sửa để thực hiện thao tác này !!!");
+                }
+                else
+                {
+
+
+                    sua = true;
+                    them = false;
+                    tbTS.Enabled = true;
+                    comboBoxLoaiSach.Enabled = true;
+                    tbSL.Enabled = true;
+                    comboBoxKeSach.Enabled = true;
+
+                    table = ls.layloaisachId(maloaisach).Tables[0];
+                    table1 = ke.laykesachID(make).Tables[0];
+                    comboBoxLoaiSach.Text = table.Rows[0]["tenloaisach"].ToString();
+                    comboBoxKeSach.Text = table1.Rows[0]["tenke"].ToString();
+                }
+            }
         }
 
         private void buttonXoa_Click(object sender, EventArgs e)
@@ -121,7 +148,7 @@ namespace QuanLyThuVien1
                 {
                     if (BLsach.Instance.themsach(tbID.Text, tbTS.Text, comboBoxLoaiSach.SelectedValue.ToString(), Convert.ToInt32(tbSL.Text), comboBoxKeSach.SelectedValue.ToString(), ref err))
                     {
-                        MessageBox.Show("Done!", "Them Thanh Cong", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Done!", "Them Thanh Cong", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         them = false;
                         load();
                     }
@@ -191,7 +218,7 @@ namespace QuanLyThuVien1
             {
                 string make = Convert.ToString(comboBoxKeSach.SelectedValue);
                 DataTable table = new DataTable();
-                table = ke.laykesach(make).Tables[0];
+                table = ke.laykesachID(make).Tables[0];
 
             }
             catch

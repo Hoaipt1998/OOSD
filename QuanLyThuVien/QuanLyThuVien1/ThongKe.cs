@@ -35,6 +35,7 @@ namespace QuanLyThuVien1
 
         private void ThongKe_Load(object sender, EventArgs e)
         {
+            
         }
 
         private void buttonTimKiem_Click(object sender, EventArgs e)

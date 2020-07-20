@@ -44,8 +44,10 @@ namespace QuanLyThuVien1
                         NhanVienBuiderDirectory buiderDirectory = new NhanVienBuiderDirectory();
                         AdminBuilder adminBuilder = new AdminBuilder();
                         controllerNhanVien adminnhanvien = buiderDirectory.Construct(adminBuilder, tbID.Text, tbTK.Text, tbMK.Text, tbNV.Text, tbDC.Text, tbSEX.Text);
-                        nv.themnvn(adminnhanvien, ref err);
-                        MessageBox.Show("Đã thêm xong rồi nè, hihi");
+                        if (nv.themnvn(adminnhanvien, ref err))
+                        {
+                            MessageBox.Show("Đã thêm xong rồi nè, hihi");
+                        }
                     }
                     else if (comboBoxLoaiTK.Text == "thuthu")
                     {
@@ -53,8 +55,10 @@ namespace QuanLyThuVien1
                         NhanVienBuiderDirectory buiderDirectory = new NhanVienBuiderDirectory();
                         ThuThuBuilder thuThuBuilder = new ThuThuBuilder();
                         controllerNhanVien thuthunhanvien = buiderDirectory.Construct(thuThuBuilder, tbID.Text, tbTK.Text, tbMK.Text, tbNV.Text, tbDC.Text, tbSEX.Text);
-                        nv.themnvn(thuthunhanvien, ref err);
-                        MessageBox.Show("Đã thêm xong rồi nè, hihi");
+                        if (nv.themnvn(thuthunhanvien, ref err))
+                        {
+                            MessageBox.Show("Đã thêm xong rồi nè, hihi");
+                        }
                     }
                     else if (comboBoxLoaiTK.Text == "docgia")
                     {
@@ -62,8 +66,10 @@ namespace QuanLyThuVien1
                         NhanVienBuiderDirectory buiderDirectory = new NhanVienBuiderDirectory();
                         DocGiaBuilder docGiaBuilder = new DocGiaBuilder();
                         controllerNhanVien docgianhanvien = buiderDirectory.Construct(docGiaBuilder, tbID.Text, tbTK.Text, tbMK.Text, tbNV.Text, tbDC.Text, tbSEX.Text);
-                        nv.themnvn(docgianhanvien, ref err);
-                        MessageBox.Show("Đã thêm xong rồi nè, hihi");
+                        if (nv.themnvn(docgianhanvien, ref err))
+                        {
+                            MessageBox.Show("Đã thêm xong rồi nè, hihi");
+                        }
                     }
                 }
                 catch (SqlException)

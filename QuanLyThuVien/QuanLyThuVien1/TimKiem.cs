@@ -13,7 +13,6 @@ namespace QuanLyThuVien1
 {
     public partial class TimKiem : Form
     {
-        DataTable dt = null;
         BLsach sach = new BLsach();
         public TimKiem()
         {

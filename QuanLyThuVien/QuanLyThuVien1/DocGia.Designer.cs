@@ -65,7 +65,7 @@
             // tbTK
             // 
             this.tbTK.Location = new System.Drawing.Point(417, 31);
-            this.tbTK.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbTK.Margin = new System.Windows.Forms.Padding(5);
             this.tbTK.Multiline = true;
             this.tbTK.Name = "tbTK";
             this.tbTK.Size = new System.Drawing.Size(341, 44);
@@ -110,7 +110,7 @@
             // tbDC
             // 
             this.tbDC.Location = new System.Drawing.Point(158, 405);
-            this.tbDC.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbDC.Margin = new System.Windows.Forms.Padding(5);
             this.tbDC.Multiline = true;
             this.tbDC.Name = "tbDC";
             this.tbDC.Size = new System.Drawing.Size(219, 41);
@@ -119,7 +119,7 @@
             // tbTDG
             // 
             this.tbTDG.Location = new System.Drawing.Point(158, 265);
-            this.tbTDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbTDG.Margin = new System.Windows.Forms.Padding(5);
             this.tbTDG.Multiline = true;
             this.tbTDG.Name = "tbTDG";
             this.tbTDG.Size = new System.Drawing.Size(219, 41);
@@ -128,7 +128,7 @@
             // tbID
             // 
             this.tbID.Location = new System.Drawing.Point(158, 191);
-            this.tbID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbID.Margin = new System.Windows.Forms.Padding(5);
             this.tbID.Multiline = true;
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(219, 41);
@@ -136,11 +136,13 @@
             // 
             // dgvDG
             // 
+            this.dgvDG.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDG.BackgroundColor = System.Drawing.Color.White;
             this.dgvDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDG.Location = new System.Drawing.Point(417, 134);
-            this.dgvDG.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvDG.Margin = new System.Windows.Forms.Padding(5);
             this.dgvDG.Name = "dgvDG";
+            this.dgvDG.ReadOnly = true;
             this.dgvDG.Size = new System.Drawing.Size(668, 566);
             this.dgvDG.TabIndex = 47;
             this.dgvDG.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDG_CellClick);
@@ -152,12 +154,12 @@
             this.btnTK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnTK.Location = new System.Drawing.Point(840, 34);
-            this.btnTK.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnTK.Location = new System.Drawing.Point(840, 29);
+            this.btnTK.Margin = new System.Windows.Forms.Padding(5);
             this.btnTK.Name = "btnTK";
             this.btnTK.Size = new System.Drawing.Size(245, 46);
             this.btnTK.TabIndex = 46;
-            this.btnTK.Text = "Tìm kiếm theo mã ĐG";
+            this.btnTK.Text = "Tìm kiếm theo tên độc giả";
             this.btnTK.UseVisualStyleBackColor = true;
             this.btnTK.Click += new System.EventHandler(this.btnTK_Click);
             // 
@@ -224,7 +226,7 @@
             // tbGT
             // 
             this.tbGT.Location = new System.Drawing.Point(158, 334);
-            this.tbGT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbGT.Margin = new System.Windows.Forms.Padding(5);
             this.tbGT.Multiline = true;
             this.tbGT.Name = "tbGT";
             this.tbGT.Size = new System.Drawing.Size(219, 41);
@@ -246,6 +248,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1107, 720);
@@ -267,7 +270,7 @@
             this.Controls.Add(this.dgvDG);
             this.Controls.Add(this.btnTK);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "DocGia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DocGia";

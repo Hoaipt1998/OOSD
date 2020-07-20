@@ -69,7 +69,7 @@
             // tbTK
             // 
             this.tbTK.Location = new System.Drawing.Point(439, 20);
-            this.tbTK.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbTK.Margin = new System.Windows.Forms.Padding(5);
             this.tbTK.Multiline = true;
             this.tbTK.Name = "tbTK";
             this.tbTK.Size = new System.Drawing.Size(491, 44);
@@ -117,7 +117,7 @@
             // tbDC
             // 
             this.tbDC.Location = new System.Drawing.Point(182, 232);
-            this.tbDC.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbDC.Margin = new System.Windows.Forms.Padding(5);
             this.tbDC.Multiline = true;
             this.tbDC.Name = "tbDC";
             this.tbDC.Size = new System.Drawing.Size(219, 41);
@@ -126,7 +126,7 @@
             // tbTNV
             // 
             this.tbTNV.Location = new System.Drawing.Point(182, 163);
-            this.tbTNV.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbTNV.Margin = new System.Windows.Forms.Padding(5);
             this.tbTNV.Multiline = true;
             this.tbTNV.Name = "tbTNV";
             this.tbTNV.Size = new System.Drawing.Size(219, 41);
@@ -135,7 +135,7 @@
             // tbID
             // 
             this.tbID.Location = new System.Drawing.Point(182, 89);
-            this.tbID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbID.Margin = new System.Windows.Forms.Padding(5);
             this.tbID.Multiline = true;
             this.tbID.Name = "tbID";
             this.tbID.Size = new System.Drawing.Size(219, 41);
@@ -143,11 +143,12 @@
             // 
             // dgvNV
             // 
-            this.dgvNV.BackgroundColor = System.Drawing.Color.White;
+            this.dgvNV.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNV.Location = new System.Drawing.Point(439, 89);
-            this.dgvNV.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvNV.Margin = new System.Windows.Forms.Padding(5);
             this.dgvNV.Name = "dgvNV";
+            this.dgvNV.ReadOnly = true;
             this.dgvNV.Size = new System.Drawing.Size(781, 407);
             this.dgvNV.TabIndex = 32;
             this.dgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellClick);
@@ -159,7 +160,7 @@
             this.buttonTiemKiemNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTiemKiemNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.buttonTiemKiemNV.Location = new System.Drawing.Point(940, 20);
-            this.buttonTiemKiemNV.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.buttonTiemKiemNV.Margin = new System.Windows.Forms.Padding(5);
             this.buttonTiemKiemNV.Name = "buttonTiemKiemNV";
             this.buttonTiemKiemNV.Size = new System.Drawing.Size(280, 46);
             this.buttonTiemKiemNV.TabIndex = 31;
@@ -183,7 +184,7 @@
             // tbLTK
             // 
             this.tbLTK.Location = new System.Drawing.Point(182, 301);
-            this.tbLTK.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbLTK.Margin = new System.Windows.Forms.Padding(5);
             this.tbLTK.Multiline = true;
             this.tbLTK.Name = "tbLTK";
             this.tbLTK.Size = new System.Drawing.Size(219, 41);
@@ -252,7 +253,7 @@
             // tbGT
             // 
             this.tbGT.Location = new System.Drawing.Point(182, 369);
-            this.tbGT.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.tbGT.Margin = new System.Windows.Forms.Padding(5);
             this.tbGT.Multiline = true;
             this.tbGT.Name = "tbGT";
             this.tbGT.Size = new System.Drawing.Size(219, 41);
@@ -311,7 +312,7 @@
             this.Controls.Add(this.dgvNV);
             this.Controls.Add(this.buttonTiemKiemNV);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "NhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NhanVien";

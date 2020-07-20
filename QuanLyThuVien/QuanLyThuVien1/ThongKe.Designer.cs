@@ -48,12 +48,13 @@
             this.label6.ForeColor = System.Drawing.Color.Teal;
             this.label6.Location = new System.Drawing.Point(16, 20);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(238, 22);
+            this.label6.Size = new System.Drawing.Size(224, 22);
             this.label6.TabIndex = 30;
-            this.label6.Text = "THỐNG KÊ THỔNG HỢP";
+            this.label6.Text = "THỐNG KÊ TỔNG HỢP";
             // 
             // dgvTK
             // 
+            this.dgvTK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTK.BackgroundColor = System.Drawing.Color.White;
             this.dgvTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTK.Location = new System.Drawing.Point(14, 120);
@@ -129,6 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(871, 593);

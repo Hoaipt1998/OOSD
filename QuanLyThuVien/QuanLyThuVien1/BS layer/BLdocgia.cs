@@ -34,6 +34,7 @@ namespace QuanLyThuVien1.BS_layer
             DataTable dt = db.ExecuteQueryDataTable(ktdocgia, CommandType.Text);
             if (dt.Rows.Count>0)
             {
+                MessageBox.Show("Da co ID nay roi", " Da Ton Tai");
                 return false;
             }
             else return db.MyExecuteNonQuery(themdocgia, CommandType.Text, ref err);
@@ -50,7 +51,7 @@ namespace QuanLyThuVien1.BS_layer
         }
         public DataSet laydocgiaId(string madocgia)
         {
-            string laydocgiaId = @"exec dbo.kiemtradocgia";
+            string laydocgiaId = @"exec dbo.kiemtradocgia  N'" + madocgia + "'";
             return db.ExecuteQueryDataSet(laydocgiaId, CommandType.Text);
         }
     }

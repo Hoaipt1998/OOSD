@@ -44,7 +44,7 @@
             this.buttonThoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.Teal;
-            this.buttonThoat.Location = new System.Drawing.Point(87, 221);
+            this.buttonThoat.Location = new System.Drawing.Point(116, 221);
             this.buttonThoat.Name = "buttonThoat";
             this.buttonThoat.Size = new System.Drawing.Size(90, 31);
             this.buttonThoat.TabIndex = 76;
@@ -58,7 +58,7 @@
             this.buttonDoiMK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonDoiMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDoiMK.ForeColor = System.Drawing.Color.Teal;
-            this.buttonDoiMK.Location = new System.Drawing.Point(211, 221);
+            this.buttonDoiMK.Location = new System.Drawing.Point(243, 221);
             this.buttonDoiMK.Name = "buttonDoiMK";
             this.buttonDoiMK.Size = new System.Drawing.Size(115, 31);
             this.buttonDoiMK.TabIndex = 77;
@@ -83,7 +83,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(18, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 20);
@@ -95,7 +95,7 @@
             this.tbTK.Location = new System.Drawing.Point(116, 83);
             this.tbTK.Multiline = true;
             this.tbTK.Name = "tbTK";
-            this.tbTK.Size = new System.Drawing.Size(182, 36);
+            this.tbTK.Size = new System.Drawing.Size(242, 36);
             this.tbTK.TabIndex = 73;
             // 
             // label2
@@ -103,7 +103,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(18, 134);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 20);
@@ -115,14 +115,15 @@
             this.tbMK.Location = new System.Drawing.Point(116, 125);
             this.tbMK.Multiline = true;
             this.tbMK.Name = "tbMK";
-            this.tbMK.Size = new System.Drawing.Size(182, 39);
+            this.tbMK.Size = new System.Drawing.Size(242, 39);
             this.tbMK.TabIndex = 78;
             // 
             // TaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.AutoSize = true;
+            this.BackgroundImage = global::QuanLyThuVien1.Properties.Resources.mau_background_don_gian_18;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(415, 297);
             this.Controls.Add(this.label2);

@@ -102,8 +102,8 @@ namespace QuanLyThuVien1
         {
             tbDC.Enabled = true;
             tbGT.Enabled = true;
-            tbID.Enabled = true;
             tbTDG.Enabled = true;
+            tbID.Enabled = false;
             tbTK.Enabled = true;
             sua = true;
             them = false;
